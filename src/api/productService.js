@@ -20,7 +20,7 @@ export const createProduct = (product) => apiService.post("/api/product", produc
 export const getCarts = () => {
 	const token = localStorage.getItem("token");
 
-	return apiService.get("/api/cart", {
+	return apiService.get("/api/cart/customer", {
 	  headers: {
 	    Authorization: `Bearer ${token}`,
 	  },
