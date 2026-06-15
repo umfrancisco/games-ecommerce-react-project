@@ -37,6 +37,27 @@ export const GlobalCss = createGlobalStyle`
 		h2, div, p {
 			margin: 16px 0;
 		}
+		
+		a {
+			text-decoration: none;
+			color: ${cores.branca};
+		}
+	}
+	
+	.login {
+		max-width: 1024px;
+		width: 100%;
+		margin: 16px auto;
+		padding-top: 32px;
+
+		h2, p {
+			margin: 8px 0;
+		}
+		
+		a {
+			text-decoration: none;
+			color: ${cores.branca};
+		}
 	}
 `;
 

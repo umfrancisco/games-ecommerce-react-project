@@ -1,15 +1,22 @@
 import { useCart } from "../../context/CartContext";
+import { Link } from 'react-router-dom';
 import { ButtonContainer } from '../../components/Button/styles'
-import { getCarts } from '../../api/productService'
+import { getCarts, getHello } from '../../api/productService'
 import { useState, useEffect } from 'react'
 import ProductInfo from '../../context/ProductInfo'
 
 const Cart = () => {
 	
 	const { cart, addOneToCart, removeFromCart, getTotal, confirmPurchase } = useCart();
-	
+	const [login, setLogin] = useState('');
 	const [cartHistory, setCartHistory] = useState([]);
 
+	useEffect(() => {
+		getHello()
+			.then(setLogin)
+			.catch(console.error);
+	}, []);
+	
 	useEffect(() => {
 	  getCarts()
 	    .then(setCartHistory)
@@ -41,13 +48,24 @@ const Cart = () => {
 		return `ID do pedido: ${cartId} | Total pago: ${formattedTotal} | Data da compra: ${formattedDate}`;
 	}
 	
+	if (login === '' || login === undefined) {
+		return (
+			<div className='cart'>
+				<h2>Você não está logado.</h2>
+				<h2>Faça login antes de acessar o carrinho.</h2>
+				<br />
+				<ButtonContainer><Link to="/login">Login</Link></ButtonContainer>
+			</div>
+		);
+	}
+	
 	return (
 		<>
 		<div className='cart'>
 		   <h2>Carrinho</h2>
 
 		   {cart.length === 0 && <p>Seu carrinho está vazio</p>}
-
+		   
 		   {cart.map((item) => (
 		     <div key={item.id}>
 		       <p>
