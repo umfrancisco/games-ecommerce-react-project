@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { ButtonContainer } from '../../components/Button/styles';
-import { getHello, logout } from '../../api/productService'
+import { getHello, logout } from '../../api/service'
 
 const LoginPage = () => {
 	

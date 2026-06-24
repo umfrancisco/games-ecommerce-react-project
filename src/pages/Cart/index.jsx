@@ -1,7 +1,7 @@
 import { useCart } from "../../context/CartContext";
 import { Link } from 'react-router-dom';
 import { ButtonContainer } from '../../components/Button/styles'
-import { getCarts, getHello } from '../../api/productService'
+import { getCarts, getHello } from '../../api/service'
 import { useState, useEffect } from 'react'
 import ProductInfo from '../../context/ProductInfo'
 
@@ -89,16 +89,16 @@ const Cart = () => {
 		 	<h2>Histórico de compras</h2>
 			{cartHistory.map(
 				(c) => (
-					<>
+					<div key={c.cartId}>
 						<p>{formatOrders(c)}</p>
 						<ul>
 						{c.products.map(
 							(prod) => (
-								<li>-&emsp;<ProductInfo id={prod.id} />, x{prod.quantity}</li>
+								<li key={prod.id}>-&emsp;<ProductInfo id={prod.id} />, x{prod.quantity}</li>
 							)
 						)}
 						</ul>
-					</>
+					</div>
 				)
 			)}
 			<br />

@@ -1,7 +1,7 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
 import { useState, useEffect } from 'react'
-import { getProductsByCategory } from '../../api/productService'
+import { getProductsByCategory } from '../../api/service'
 
 const Home = () => {
 	

@@ -12,7 +12,7 @@ export default function ProductInfo({ id }) {
 
   useEffect(() => {
     async function fetchProduct() {
-      const res = await fetch(`http://localhost:8080/api/product/${id}`);
+      const res = await fetch(`http://localhost:8080/api/public/product/${id}`);
       const data = await res.json();
       setProduct(data);
     }

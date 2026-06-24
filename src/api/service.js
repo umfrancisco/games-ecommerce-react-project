@@ -1,19 +1,19 @@
 import { apiService } from "./api";
 
 // GET all products
-export const getProducts = () => apiService.get("/api/product");
+export const getProducts = () => apiService.get("/api/public/product");
 
 // GET single product
-export const getProductById = (id) => apiService.get(`/api/product/${id}`);
+export const getProductById = (id) => apiService.get(`/api/public/product/${id}`);
 
 // GET products by category
-export const getProductsByCategory = (category) => apiService.get(`/api/product/category/${category}`);
+export const getProductsByCategory = (category) => apiService.get(`/api/public/product/category/${category}`);
 
 // GET product to banner if stock not zero
-export const getBannerProduct = () => apiService.get("/api/product/banner");
+export const getBannerProduct = () => apiService.get("/api/public/product/banner");
 
 // POST create product
-export const createProduct = (product) => apiService.post("/api/product", product);
+export const createProduct = (product) => apiService.post("/api/admin/product", product);
 
 // GET all carts
 //export const getCarts = () => apiService.get("/cart");
@@ -40,16 +40,16 @@ export const createCart = (cart) => {
 }
 
 // PUT update product
-export const updateProduct = (id, product) => apiService.put(`/api/product/${id}`, product);
+export const updateProduct = (id, product) => apiService.put(`/api/admin/product/${id}`, product);
 
 // DELETE product
-export const deleteProduct = (id) => apiService.delete(`/api/product/${id}`);
+export const deleteProduct = (id) => apiService.delete(`/api/admin/product/${id}`);
 
 // GET hello
 export const getHello = () => {
   const token = localStorage.getItem("token");
 
-  return apiService.get("/hello", {
+  return apiService.get("/auth/hello", {
     headers: {
       Authorization: `Bearer ${token}`,
     },

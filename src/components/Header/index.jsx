@@ -4,7 +4,7 @@ import carrinho from '../../assets/images/cart.svg'
 import login from '../../assets/images/login.svg'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { getHello } from '../../api/productService'
+import { getHello } from '../../api/service'
 
 const Header = () => {
 	

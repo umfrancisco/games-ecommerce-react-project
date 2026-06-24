@@ -3,7 +3,7 @@ import { Imagem, Titulo, Precos } from './styles'
 import Tag from '../Tag'
 import bannerImg from '../../assets/images/mfakurian_black.jpg'
 import Button from '../Button'
-import { getBannerProduct } from '../../api/productService'
+import { getBannerProduct } from '../../api/service'
 
 const Banner = () => {
 

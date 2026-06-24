@@ -2,7 +2,7 @@ import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { getProductById } from '../../api/productService'
+import { getProductById } from '../../api/service'
 
 const Product = () => {
 	
