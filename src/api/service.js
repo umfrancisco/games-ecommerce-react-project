@@ -9,8 +9,8 @@ export const getProductById = (id) => apiService.get(`/api/public/product/${id}`
 // GET products by category
 export const getProductsByCategory = (category) => apiService.get(`/api/public/product/category/${category}`);
 
-// GET product to banner if stock not zero
-export const getBannerProduct = () => apiService.get("/api/public/product/banner");
+// GET product to banner 
+export const getBannerProduct = () => apiService.get("/api/public/product/highlight");
 
 // POST create product
 export const createProduct = (product) => apiService.post("/api/admin/product", product);
