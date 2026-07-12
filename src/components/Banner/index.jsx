@@ -3,14 +3,14 @@ import { Imagem, Titulo, Precos } from './styles'
 import Tag from '../Tag'
 import bannerImg from '../../assets/images/mfakurian_black.jpg'
 import Button from '../Button'
-import { getBannerProduct } from '../../api/service'
+import { getFirstHighlightedProduct } from '../../api/service'
 
 const Banner = () => {
 
 	const [product, setProduct] = useState(null);
 	
 	useEffect(() => {
-	  getBannerProduct()
+	  getFirstHighlightedProduct()
 	    .then(setProduct)
 	    .catch(console.error)
 	}, []);

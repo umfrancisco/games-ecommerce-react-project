@@ -10,7 +10,10 @@ export const getProductById = (id) => apiService.get(`/api/public/product/${id}`
 export const getProductsByCategory = (category) => apiService.get(`/api/public/product/category/${category}`);
 
 // GET product to banner 
-export const getBannerProduct = () => apiService.get("/api/public/product/highlight");
+export const getFirstHighlightedProduct = () => apiService.get("/api/public/product/highlight/first");
+
+// GET product to banner 
+export const getHighlightedProducts = () => apiService.get("/api/public/product/highlight/all");
 
 // POST create product
 export const createProduct = (product) => apiService.post("/api/admin/product", product);

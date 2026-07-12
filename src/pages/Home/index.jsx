@@ -1,14 +1,14 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
 import { useState, useEffect } from 'react'
-import { getProductsByCategory } from '../../api/service'
+import { getHighlightedProducts } from '../../api/service'
 
 const Home = () => {
 	
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-	  getProductsByCategory("action")
+	  getHighlightedProducts()
 	    .then(setProducts)
 	    .catch(console.error);
 	}, []);
