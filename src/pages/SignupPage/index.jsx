@@ -25,7 +25,7 @@ const SignupPage = () => {
 	            throw new Error("Passwords do not match");
 	        }
 
-	        const response = await axios.post('http://localhost:8080/auth/signup', {
+	        const response = await axios.post('https://justify-ind-mitsubishi-tremendous.trycloudflare.com/auth/signup', {
 	            email,
 				username,
 	            password,

@@ -33,7 +33,7 @@ const LoginPage = () => {
                 return;
             }
 
-            const response = await axios.post('http://localhost:8080/auth/login', { username, password });
+            const response = await axios.post('https://justify-ind-mitsubishi-tremendous.trycloudflare.com/auth/login', { username, password });
 			console.log("RESPONSE=", response.data);
 			
 			const token = response.data;
