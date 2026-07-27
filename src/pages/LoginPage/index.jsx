@@ -33,7 +33,7 @@ const LoginPage = () => {
                 return;
             }
 
-            const response = await axios.post('localhost:8080/auth/login', { username, password });
+            const response = await axios.post('deserve-simmering-stumble.ngrok-free.dev/auth/login', { username, password });
 			console.log("RESPONSE=", response.data);
 			
 			const token = response.data;

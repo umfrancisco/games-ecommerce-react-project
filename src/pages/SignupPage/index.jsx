@@ -25,7 +25,7 @@ const SignupPage = () => {
 	            throw new Error("Passwords do not match");
 	        }
 
-	        const response = await axios.post('localhost:8080/auth/signup', {
+	        const response = await axios.post('deserve-simmering-stumble.ngrok-free.dev/auth/signup', {
 	            email,
 				username,
 	            password,
