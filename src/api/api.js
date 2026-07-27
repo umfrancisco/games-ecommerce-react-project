@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://deserve-simmering-stumble.ngrok-free.dev",
+  baseURL: "https://come-dealers-notifications-twisted.trycloudflare.com",
   timeout: 5000,
 });
 

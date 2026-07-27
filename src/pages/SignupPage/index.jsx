@@ -25,7 +25,7 @@ const SignupPage = () => {
 	            throw new Error("Passwords do not match");
 	        }
 
-	        const response = await axios.post('https://deserve-simmering-stumble.ngrok-free.dev/auth/signup', {
+	        const response = await axios.post('https://come-dealers-notifications-twisted.trycloudflare.com/auth/signup', {
 	            email,
 				username,
 	            password,
