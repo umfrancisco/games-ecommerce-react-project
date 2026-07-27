@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://come-dealers-notifications-twisted.trycloudflare.com",
+  baseURL: "https://descending-science-margaret-one.trycloudflare.com",
   timeout: 5000,
 });
 

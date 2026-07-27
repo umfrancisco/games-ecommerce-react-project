@@ -12,7 +12,7 @@ export default function ProductInfo({ id }) {
 
   useEffect(() => {
     async function fetchProduct() {
-      const res = await fetch(`https://come-dealers-notifications-twisted.trycloudflare.com/api/public/product/${id}`);
+      const res = await fetch(`https://descending-science-margaret-one.trycloudflare.com/api/public/product/${id}`);
       const data = await res.json();
       setProduct(data);
     }
