@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "deserve-simmering-stumble.ngrok-free.dev",
+  baseURL: "https://deserve-simmering-stumble.ngrok-free.dev",
   timeout: 5000,
 });
 
