@@ -25,7 +25,7 @@ const SignupPage = () => {
 	            throw new Error("Passwords do not match");
 	        }
 
-	        const response = await axios.post('https://descending-science-margaret-one.trycloudflare.com/auth/signup', {
+	        const response = await axios.post('https://psychiatry-rome-parliamentary-shower.trycloudflare.com/auth/signup', {
 	            email,
 				username,
 	            password,

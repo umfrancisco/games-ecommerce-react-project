@@ -33,7 +33,7 @@ const LoginPage = () => {
                 return;
             }
 
-            const response = await axios.post('https://descending-science-margaret-one.trycloudflare.com/auth/login', { username, password });
+            const response = await axios.post('https://psychiatry-rome-parliamentary-shower.trycloudflare.com/auth/login', { username, password });
 			console.log("RESPONSE=", response.data);
 			
 			const token = response.data;
